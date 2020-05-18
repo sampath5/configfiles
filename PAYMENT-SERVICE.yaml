@@ -1,0 +1,31 @@
+spring:
+  h2:
+    console:
+      enabled: true
+  application:
+    name: PAYMENT-SERVICE
+  datasource:
+    platform: true
+    url: jdbc:h2:mem:paymentdb
+  cloud:
+    config:
+      uri: http://localhost:8888
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+my:
+  greeting: this is a greeting
+
+thirdPartyPort: http://localhost:8083/thirdparty
+
+# logging:
+#   file:
+#     name:
+#       C:/springapp/logfiles/paymentLog.log
+eureka:
+  serviceUrl:
+    defaultzone: http//localhost:8761/eureka

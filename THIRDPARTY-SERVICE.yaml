@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: THIRDPARTY-SERVICE
+  cloud:
+    config:
+      uri: http://localhost:8888
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+logging:
+  file:
+    name:
+      C:/springapp/logfiles//thirdPartyLog.log
